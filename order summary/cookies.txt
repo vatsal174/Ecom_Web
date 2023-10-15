@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+indiandryfruit.shop	TRUE	/	FALSE	1999999999	ci_session	f2k9ejv2b3bsinbeo526i1rfq99jj2bd
+
