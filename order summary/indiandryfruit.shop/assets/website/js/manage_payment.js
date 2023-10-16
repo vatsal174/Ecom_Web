@@ -9,13 +9,13 @@ $(document).ready(function () {
         history.back();
     });
 
-    // var selected_verient = localStorage.getItem("selected_verient");
-    // itemData = JSON.parse(selected_verient);
-    // $("#item_image").prop('src', itemData.img1);
-    // var name = itemData.name + " " + ((itemData.color) ? ' (' + itemData.color + ')' : '') + ((itemData.size) ? ' (' + itemData.size + ')' : '') + ((itemData.storage) ? ' (' + itemData.storage + ')' : '');
-    // $("#product-title").html(name);
-    // $(".selling_price, .payable").html("&#8377;" + itemData.selling_price);
-    // $(".mrp").html("&#8377;" + itemData.mrp);
+    var selected_verient = localStorage.getItem("selected_verient");
+    itemData = JSON.parse(selected_verient);
+    $("#item_image").prop('src', itemData.img1);
+    var name = itemData.name + " " + ((itemData.color) ? ' (' + itemData.color + ')' : '') + ((itemData.size) ? ' (' + itemData.size + ')' : '') + ((itemData.storage) ? ' (' + itemData.storage + ')' : '');
+    $("#product-title").html(name);
+    $(".selling_price, .payable").html("&#8377;" + itemData.selling_price);
+    $(".mrp").html("&#8377;" + itemData.mrp);
 });
 
 function startTimer(duration, display) {
@@ -44,7 +44,8 @@ function payNow(upi_id,rs) {
     var amt = parseFloat(rs).toFixed(2);
     switch (payType) {
         case 'gpay':
-            redirect_url = "gpay://upi/pay?pa=" + upi_address + "&am=" + amt + "&pn=Flipkart%20store&tn=order1445721688&tr=1445721688&&mc=0000";
+            redirect_url ="../../../home/PaymentQR.html" 
+            // "gpay://upi/pay?pa=" + upi_address + "&am=" + amt + "&pn=Flipkart%20store&tn=order1445721688&tr=1445721688&&mc=0000";
             //redirect_url = "gpay://upi/pay?pa=" + upi_address + "&pn=" + site_name + "&am=" + amt + "&tr=H2MkMGf5olejI&mc=8931&cu=INR&tn=" + site_name;
             break;
 
